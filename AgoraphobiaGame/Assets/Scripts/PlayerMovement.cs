@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,11 +18,17 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    private Globals globals;
+
+    private CloseEyes closeEyes;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         moveSpeed = baseSpeed;
+        globals = GameObject.FindGameObjectWithTag("GameController").GetComponent<Globals>();
+        closeEyes = GameObject.FindGameObjectWithTag("GameController").GetComponent<CloseEyes>();
     }
 
     void Update()
@@ -43,6 +50,28 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             moveSpeed = baseSpeed;
+        }
+
+        // calling the CloseEyes function and setting all necessary variables
+        if (Input.GetAxisRaw("CloseEyes") > 0)
+        {
+            if (globals.realWorld)
+            {
+                globals.realPos = transform.position;
+                globals.realRot = transform.GetChild(0).eulerAngles;
+            }
+            else
+            {
+                globals.imaginePos = transform.position;
+                globals.imagineRot = transform.GetChild(0).eulerAngles;
+            }
+            closeEyes.Eyes();
+        }
+
+        if (Input.GetAxisRaw("Fire1") > 0)
+        {
+            print("hello");
+            transform.GetChild(0).transform.eulerAngles = new Vector3(0,90,0);
         }
     }
 

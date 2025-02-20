@@ -9,7 +9,7 @@ public class PlayerCam : MonoBehaviour
 
     public Transform camPos;
 
-    private float yaw = 0;
+    public float yaw = 0;
     private float pitch = 0;
 
     void Start()
@@ -35,7 +35,5 @@ public class PlayerCam : MonoBehaviour
 
         // camera's position sticks to player
         transform.position = camPos.position;
-
-        print(pitch);
     }
 }
