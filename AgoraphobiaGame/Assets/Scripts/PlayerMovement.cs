@@ -67,12 +67,6 @@ public class PlayerMovement : MonoBehaviour
             }
             closeEyes.Eyes();
         }
-
-        if (Input.GetAxisRaw("Fire1") > 0)
-        {
-            print("hello");
-            transform.GetChild(0).transform.eulerAngles = new Vector3(0,90,0);
-        }
     }
 
     private void FixedUpdate()
