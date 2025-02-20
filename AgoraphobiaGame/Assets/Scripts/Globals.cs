@@ -14,6 +14,8 @@ public class Globals : MonoBehaviour
     public Vector3 imaginePos;
     public Vector3 realRot;
     public Vector3 imagineRot;
+
+    public GameObject eyesUI;
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -26,6 +28,9 @@ public class Globals : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        eyesUI = GameObject.Find("EyesUI");
+
 
         realPos = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
