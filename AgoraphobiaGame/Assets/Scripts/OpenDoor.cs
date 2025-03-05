@@ -31,4 +31,15 @@ public class OpenDoor : MonoBehaviour
     {
         open = !open;
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player" || other.transform.parent.tag == "Player")
+        {
+            if (Input.GetAxisRaw("Interact") > 0)
+            {
+                print(other.name);
+                Interact();
+            }
+        }
+    }
 }
