@@ -6,7 +6,7 @@ public class OpenDoor : MonoBehaviour
 {
     private bool open = false;
 
-    public float moveSpeed = 1.0f;
+    [SerializeField] private float moveSpeed = 1.0f;
 
     [Header("Rotations must be input as a positive float out of 360")]
     public int closedYRotation;
@@ -23,7 +23,7 @@ public class OpenDoor : MonoBehaviour
         else
         {
             Quaternion target = Quaternion.Euler(0, closedYRotation, 0);
-            transform.localRotation = Quaternion.Slerp(transform.localRotation, target, Time.deltaTime);
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, target, moveSpeed * Time.deltaTime);
         }
     }
 
@@ -37,7 +37,6 @@ public class OpenDoor : MonoBehaviour
         {
             if (Input.GetAxisRaw("Interact") > 0)
             {
-                print(other.name);
                 Interact();
             }
         }

@@ -5,6 +5,17 @@ using UnityEngine;
 public class DoorZone : MonoBehaviour
 {
     private float lastPress;
+
+    public GameObject interactUI;
+
+    private void Awake()
+    {
+        interactUI = GameObject.Find("InteractMessage");
+    }
+    private void Start()
+    {
+        interactUI.SetActive(false);
+    }
     private void Update()
     {
         lastPress = Input.GetAxisRaw("Interact");
@@ -15,9 +26,23 @@ public class DoorZone : MonoBehaviour
         {
             if (Input.GetAxisRaw("Interact") < lastPress)
             {
-                print(other.name);
                 transform.GetChild(0).GetComponent<OpenDoor>().Interact();
             }
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "PlayerCam")
+        {
+            interactUI.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.transform.tag == "PlayerCam")
+        {
+            interactUI.SetActive(false);
         }
     }
 }
