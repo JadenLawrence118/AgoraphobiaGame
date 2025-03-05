@@ -1,7 +1,10 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,11 +19,13 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 moveDirection;
 
-    Rigidbody rb;
+    private Rigidbody rb;
 
     private Globals globals;
 
     private CloseEyes closeEyes;
+    
+    public OpenDoor openDoor;
 
     void Start()
     {
@@ -66,6 +71,12 @@ public class PlayerMovement : MonoBehaviour
                 globals.imagineRot = transform.GetChild(0).eulerAngles;
             }
             closeEyes.Eyes();
+        }
+
+        //debug
+        if (Input.GetKeyUp(KeyCode.L))
+        {
+            openDoor.Interact();
         }
     }
 

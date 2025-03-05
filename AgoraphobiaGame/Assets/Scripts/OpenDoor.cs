@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class OpenDoor : MonoBehaviour
+{
+    private bool open = false;
+
+    public float moveSpeed = 1.0f;
+
+    [Header("Rotations must be input as a positive float out of 360")]
+    public int closedYRotation;
+    public int openYRotation;
+
+
+    void Update()
+    {
+        if (open)
+        {
+            Quaternion target = Quaternion.Euler(0, openYRotation, 0);
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, target, moveSpeed * Time.deltaTime);
+        }
+        else
+        {
+            Quaternion target = Quaternion.Euler(0, closedYRotation, 0);
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, target, Time.deltaTime);
+        }
+    }
+
+    public void Interact()
+    {
+        open = !open;
+    }
+}
