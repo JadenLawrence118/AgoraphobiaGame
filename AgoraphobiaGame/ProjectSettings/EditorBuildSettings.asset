@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Imagine1.unity
     guid: 7518f0d197559424da6773d6e32a7d5f
+  - enabled: 1
+    path: Assets/Scenes/SplashScreen.unity
+    guid: 44d1578fe4f66354d964098bec2b7350
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 75203cf581d24d641ba3cdff5ed8ae3f
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: 1f7859ae1fbf5014ab1a5711a7a790f2
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: d9fc9862ff2ec8841800e915b01dc3c3
   m_configObjects: {}

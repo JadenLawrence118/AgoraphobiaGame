@@ -72,12 +72,6 @@ public class PlayerMovement : MonoBehaviour
             }
             closeEyes.Eyes();
         }
-
-        //debug
-        if (Input.GetKeyUp(KeyCode.L))
-        {
-            openDoor.Interact();
-        }
     }
 
     private void FixedUpdate()

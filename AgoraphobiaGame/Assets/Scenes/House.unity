@@ -9683,6 +9683,7 @@ PrefabInstance:
     - {fileID: -1332352919480943004, guid: b89fb98192f83a140b1d3506858794dc, type: 3}
     - {fileID: 65702495048144492, guid: b89fb98192f83a140b1d3506858794dc, type: 3}
     - {fileID: 3266251763826766858, guid: b89fb98192f83a140b1d3506858794dc, type: 3}
+    - {fileID: -4864220794086394412, guid: b89fb98192f83a140b1d3506858794dc, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b89fb98192f83a140b1d3506858794dc, type: 3}
@@ -14467,9 +14468,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 88101192566508909, guid: 70e648a584e6fc14091086b22fa6f44b,
         type: 3}
+      propertyPath: sceneNo
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 88101192566508909, guid: 70e648a584e6fc14091086b22fa6f44b,
+        type: 3}
       propertyPath: targetCollision
       value: 
       objectReference: {fileID: 1943731540}
+    - target: {fileID: 701160388610960538, guid: 70e648a584e6fc14091086b22fa6f44b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1430535392386519222, guid: 70e648a584e6fc14091086b22fa6f44b,
         type: 3}
       propertyPath: m_Name

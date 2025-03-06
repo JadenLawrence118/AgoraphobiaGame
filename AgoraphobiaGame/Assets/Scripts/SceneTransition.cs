@@ -12,6 +12,8 @@ public class SceneTransition : MonoBehaviour
     {
         if (other.gameObject == targetCollision)
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             SceneManager.LoadScene(sceneNo);
         }
     }
