@@ -45,3 +45,7 @@ Neighbourhood - https://www.cgtrader.com/free-3d-models/exterior/house/free-low-
 Sand - https://3dtextures.me/2017/03/23/sand-002/
 
 Sea - https://github.com/Unity-Technologies/boat-attack-water
+
+Boulders - https://www.cgtrader.com/free-3d-models/exterior/landscape/stones-for-ingame-use
+
+Cliffs - https://www.cgtrader.com/free-3d-models/plant/other/two-cliff-pack
