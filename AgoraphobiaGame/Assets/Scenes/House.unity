@@ -12440,7 +12440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   realWorld: 1
   realPos: {x: 0, y: 0, z: 0}
-  imaginePos: {x: 0, y: 0, z: 0}
+  imaginePos: {x: 0.67, y: 0.724, z: -18.98}
   realRot: {x: 0, y: 0, z: 0}
   imagineRot: {x: 0, y: 0, z: 0}
   eyesUI: {fileID: 915857580}
@@ -13876,7 +13876,7 @@ Transform:
   m_GameObject: {fileID: 1943731540}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.591, y: 0.552, z: -1.678}
+  m_LocalPosition: {x: -2.075, y: 0.552, z: -3.893}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
