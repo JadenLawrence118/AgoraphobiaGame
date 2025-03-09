@@ -8,8 +8,6 @@ using UnityEngine.UI;
 public class CloseEyes : MonoBehaviour
 {
     private Globals globals;
-    public float closeSpeed;
-    public float openSpeed;
 
     private void Awake()
     {

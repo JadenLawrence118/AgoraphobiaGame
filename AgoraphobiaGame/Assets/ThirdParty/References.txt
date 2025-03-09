@@ -61,3 +61,5 @@ Skyboxes - https://assetstore.unity.com/packages/2d/textures-materials/sky/skybo
 Door Open Audio - https://freesound.org/people/pagancow/sounds/15419/
 
 Ocean Waves Audio - https://freesound.org/people/Yoyodaman234/sounds/331220/
+
+Footstep Audio - https://leohpaz.itch.io/rpg-essentials-sfx-free

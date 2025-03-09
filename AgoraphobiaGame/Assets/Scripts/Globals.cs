@@ -11,8 +11,8 @@ public class Globals : MonoBehaviour
     public bool realWorld = true;
 
     public Vector3 realPos;
-    public Vector3 imaginePos;
     public Vector3 realRot;
+    public Vector3 imaginePos;
     public Vector3 imagineRot;
 
     public GameObject eyesUI;

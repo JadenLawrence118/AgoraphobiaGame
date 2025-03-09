@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public float baseSpeed = 1;
     public float sprintSpeed = 2;
+    public float baseWalkAudioPitch = 1;
+    public float sprintWalkAudioPitch = 2;
     private float moveSpeed = 1;
 
     public Transform orientation;
@@ -17,16 +19,16 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
 
-    Vector3 moveDirection;
+    private Vector3 moveDirection;
+
+    private AudioSource footstepAudio;
 
     private Rigidbody rb;
 
     private Globals globals;
 
     private CloseEyes closeEyes;
-    
-    public OpenDoor openDoor;
-
+   
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -34,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = baseSpeed;
         globals = GameObject.FindGameObjectWithTag("GameController").GetComponent<Globals>();
         closeEyes = GameObject.FindGameObjectWithTag("GameController").GetComponent<CloseEyes>();
+        footstepAudio = GetComponent<AudioSource>();
+        footstepAudio.enabled = false;
     }
 
     void Update()
@@ -51,10 +55,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxisRaw("Sprint") > 0)
         {
             moveSpeed = sprintSpeed;
+            footstepAudio.pitch = sprintWalkAudioPitch;
         }
         else
         {
             moveSpeed = baseSpeed;
+            footstepAudio.pitch = baseWalkAudioPitch;
         }
 
         // calling the CloseEyes function and setting all necessary variables
@@ -71,6 +77,18 @@ public class PlayerMovement : MonoBehaviour
                 globals.imagineRot = transform.GetChild(0).eulerAngles;
             }
             closeEyes.Eyes();
+
+
+        }
+
+        // footstep audio
+        if (horizontalInput != 0 || verticalInput != 0)
+        {
+            footstepAudio.enabled = true;
+        }
+        else
+        {
+            footstepAudio.enabled = false;
         }
     }
 
