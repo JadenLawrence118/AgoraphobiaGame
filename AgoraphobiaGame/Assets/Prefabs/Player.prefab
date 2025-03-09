@@ -204,11 +204,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 15
-  sprintSpeed: 30
+  sprintSpeed: 22
   baseWalkAudioPitch: 1
-  sprintWalkAudioPitch: 2
+  sprintWalkAudioPitch: 1.5
   orientation: {fileID: 3038307732857952171}
-  openDoor: {fileID: 0}
 --- !u!82 &467362710619931588
 AudioSource:
   m_ObjectHideFlags: 0
