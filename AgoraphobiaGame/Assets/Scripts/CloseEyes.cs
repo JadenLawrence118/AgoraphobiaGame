@@ -21,7 +21,7 @@ public class CloseEyes : MonoBehaviour
 
     IEnumerator WaitForSceneLoad(Vector3 newPos, Vector3 newRot, bool realWorld)
     {
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSeconds(0.1f);
         GameObject.FindGameObjectWithTag("Player").transform.position = newPos;
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerCam>().yaw = newRot.y;
         globals.realWorld = realWorld;
