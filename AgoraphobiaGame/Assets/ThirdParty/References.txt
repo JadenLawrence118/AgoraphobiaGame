@@ -57,3 +57,7 @@ Sand Dunes - https://www.cgtrader.com/free-3d-models/interior/other/dune-d99474d
 Beach Chair - https://www.turbosquid.com/3d-models/deck-chair-low-poly-pbr-2052041
 
 Skyboxes - https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633?srsltid=AfmBOopHgkN1mLtJNXKjD1U-bbqJqghjQcmHiWgPPuNzLDRIKSrr65St
+
+Door Open Audio - https://freesound.org/people/pagancow/sounds/15419/
+
+Ocean Waves Audio - https://freesound.org/people/Yoyodaman234/sounds/331220/
