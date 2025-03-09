@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorZone : MonoBehaviour
 {
-    private float lastPress;
+    private bool canOpen;
 
     public GameObject interactUI;
 
@@ -18,22 +18,20 @@ public class DoorZone : MonoBehaviour
     }
     private void Update()
     {
-        lastPress = Input.GetAxisRaw("Interact");
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.transform.tag == "PlayerCam")
-        {
-            if (Input.GetAxisRaw("Interact") < lastPress)
+        if (canOpen)
+        {            
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 transform.GetChild(0).GetComponent<OpenDoor>().Interact();
             }
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "PlayerCam")
         {
+            canOpen = true;
             interactUI.SetActive(true);
         }
     }
@@ -42,6 +40,7 @@ public class DoorZone : MonoBehaviour
     {
         if(other.transform.tag == "PlayerCam")
         {
+            canOpen = false;
             interactUI.SetActive(false);
         }
     }
