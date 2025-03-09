@@ -30,6 +30,7 @@ public class OpenDoor : MonoBehaviour
     public void Interact()
     {
         open = !open;
+        gameObject.GetComponent<AudioSource>().Play();
     }
     private void OnTriggerStay(Collider other)
     {
