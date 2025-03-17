@@ -8,6 +8,8 @@ using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private static PlayerMovement self;
+
     public float baseSpeed = 1;
     public float sprintSpeed = 2;
     public float baseWalkAudioPitch = 1;
@@ -28,7 +30,21 @@ public class PlayerMovement : MonoBehaviour
     private Globals globals;
 
     private CloseEyes closeEyes;
-   
+
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+
+        if (self == null)
+        {
+            self = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody>();

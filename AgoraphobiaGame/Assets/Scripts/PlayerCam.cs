@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
 {
+    private static PlayerCam self;
+
     public float sensitivityX = 1;
     public float sensitivityY = 1;
 
@@ -12,6 +14,19 @@ public class PlayerCam : MonoBehaviour
     public float yaw = 0;
     private float pitch = 0;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+
+        if (self == null)
+        {
+            self = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
