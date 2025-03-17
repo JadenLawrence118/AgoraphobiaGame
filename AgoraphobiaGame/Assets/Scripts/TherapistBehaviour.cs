@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 public class TherapistBehaviour : MonoBehaviour
 {
-    private float lastXPos;
-    private float lastZPos;
-    private float lastRot;
-
-    public bool moving = false;
-
-    private PlayableDirector director;
     public bool move = false;
 
+    private PlayableDirector director;
     private Animator animator;
+
+    public TimelineAsset[] timelineAssets;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -23,21 +21,6 @@ public class TherapistBehaviour : MonoBehaviour
 
     void Update()
     {
-        // checks current position against previous position to see if moving
-        if (moving)
-        {
-            animator.SetBool("Moving", true);
-        }
-        else
-        {
-            animator.SetBool("Moving", false);
-        }
-
-        // get last position
-        lastXPos = transform.position.x;
-        lastZPos = transform.position.z;
-
-
         // debug
         if (move)
         {
@@ -48,11 +31,20 @@ public class TherapistBehaviour : MonoBehaviour
 
     public void RotateLeft()
     {
-        animator.SetFloat("TurnAngle", -1);
+        animator.SetFloat("TurnAngle", 1);
     }
 
     public void RotateRight()
     {
-        animator.SetFloat("TurnAngle", 1);
+        animator.SetFloat("TurnAngle", -1);
+    }
+
+    public void StartWalk()
+    {
+        animator.SetBool("Moving", true);
+    }
+    public void EndWalk()
+    {
+        animator.SetBool("Moving", false);
     }
 }
