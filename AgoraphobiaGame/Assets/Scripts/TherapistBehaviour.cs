@@ -1,22 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class TherapistBehaviour : MonoBehaviour
 {
-    public bool walking = false;
+    private float lastXPos;
+    private float lastZPos;
+    private float lastRot;
+
+    public bool moving = false;
+
+    private PlayableDirector director;
+    public bool move = false;
 
     private Animator animator;
-    private Rigidbody rb;
     void Start()
     {
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
+        director = GetComponent<PlayableDirector>();
     }
 
     void Update()
     {
-        if (rb.velocity.x != 0 || rb.velocity.z != 0)
+        // checks current position against previous position to see if moving
+        if (moving)
         {
             animator.SetBool("Moving", true);
         }
@@ -24,5 +32,27 @@ public class TherapistBehaviour : MonoBehaviour
         {
             animator.SetBool("Moving", false);
         }
+
+        // get last position
+        lastXPos = transform.position.x;
+        lastZPos = transform.position.z;
+
+
+        // debug
+        if (move)
+        {
+            move = false;
+            director.Play();
+        }
+    }
+
+    public void RotateLeft()
+    {
+        animator.SetFloat("TurnAngle", -1);
+    }
+
+    public void RotateRight()
+    {
+        animator.SetFloat("TurnAngle", 1);
     }
 }
