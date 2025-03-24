@@ -6,26 +6,24 @@ using UnityEngine.Timeline;
 
 public class TherapistBehaviour : MonoBehaviour
 {
-    public bool move = false;
+    public bool moving = false;
 
-    private PlayableDirector director;
     private Animator animator;
-
-    public TimelineAsset[] timelineAssets;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        director = GetComponent<PlayableDirector>();
     }
 
     void Update()
     {
-        // debug
-        if (move)
+        if (moving)
         {
-            move = false;
-            director.Play();
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
         }
     }
 
@@ -37,14 +35,5 @@ public class TherapistBehaviour : MonoBehaviour
     public void RotateRight()
     {
         animator.SetFloat("TurnAngle", -1);
-    }
-
-    public void StartWalk()
-    {
-        animator.SetBool("Moving", true);
-    }
-    public void EndWalk()
-    {
-        animator.SetBool("Moving", false);
     }
 }

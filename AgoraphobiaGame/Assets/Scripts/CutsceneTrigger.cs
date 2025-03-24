@@ -18,7 +18,6 @@ public class CutsceneTrigger : MonoBehaviour
             {
                 GetComponent<BoxCollider>().enabled = false;
             }
-            director.playableAsset = director.gameObject.GetComponent<TherapistBehaviour>().timelineAssets[assetIndex];
             director.Play();
         }
     }
