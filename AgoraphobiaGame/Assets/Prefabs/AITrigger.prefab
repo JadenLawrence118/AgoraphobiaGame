@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 91144887612239071}
   - component: {fileID: 2455886554755331857}
   m_Layer: 0
-  m_Name: CutsceneTrigger
+  m_Name: AITrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

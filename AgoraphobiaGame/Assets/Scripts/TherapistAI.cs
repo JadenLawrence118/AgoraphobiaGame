@@ -12,7 +12,7 @@ public class TherapistAI : MonoBehaviour
     private GameObject player;
 
     public GameObject[] waypoints;
-    public int waypointIndex;
+    public int waypointIndex = -1;
 
     public bool move = false;
 
