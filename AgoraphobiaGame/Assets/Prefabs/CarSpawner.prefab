@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &508501886135034161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7111864040153681705}
+  - component: {fileID: 9205315633615083363}
+  m_Layer: 0
+  m_Name: CarSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7111864040153681705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508501886135034161}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.96, y: 0.05, z: -46.792}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9205315633615083363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508501886135034161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626c203ce42f074469868a3272d721a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cars:
+  - {fileID: 4000182662976724720, guid: 02a4af5e71d033d4da51799114780537, type: 3}
+  - {fileID: 6002980745009561274, guid: a5ab5bb87a5d4714ebd9c93c246286da, type: 3}
+  - {fileID: 5671073310233555201, guid: ba5da1433e001e24c931d038b1e40979, type: 3}
+  - {fileID: 7191009236789674651, guid: 17027ba3ba8651a478824df683a9cfb1, type: 3}
+  - {fileID: 6338474931272978822, guid: 3720314005bb70c4f87d9ee18b405283, type: 3}
+  - {fileID: 4503736208374202379, guid: 487992af76b59b7428158d5f6b950147, type: 3}
+  - {fileID: 8372361071790934691, guid: f1b3b0f96709c344cb57dad6310b80b7, type: 3}
+  - {fileID: 5474317031397005743, guid: b9283dcf68c702f439da90ae30eb9b96, type: 3}
+  - {fileID: 8994676171398214224, guid: 004c5fcd07a8ddb468192a610b353a73, type: 3}
+  - {fileID: 556248627831862337, guid: 5b40df906eb55db4f9ef31544ba7a856, type: 3}
+  minimumCooldown: 2
+  YRotationOffset: 0
+  spawnedDirection: {x: 0, y: 0, z: 180}

@@ -15,7 +15,7 @@ public class CarSpawner : MonoBehaviour
 
     IEnumerator SpawnCar()
     {
-        yield return new WaitForSeconds(Random.Range(minimumCooldown, 10));
+        yield return new WaitForSeconds(Random.Range(minimumCooldown, 7));
         int carIndex = Random.Range(0, cars.Length - 1);
         GameObject spawnedCar =  Instantiate(cars[carIndex], gameObject.transform.position, cars[carIndex].transform.rotation);
         spawnedCar.GetComponent<CarMovement>().moveDirection = spawnedDirection;
