@@ -13578,6 +13578,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455886554755331857, guid: a8ff1309f6ff86e4480ec8de3ff37103,
         type: 3}
+      propertyPath: NPCText
+      value: 
+      objectReference: {fileID: 915509752}
+    - target: {fileID: 2455886554755331857, guid: a8ff1309f6ff86e4480ec8de3ff37103,
+        type: 3}
+      propertyPath: newText
+      value: You can do this.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455886554755331857, guid: a8ff1309f6ff86e4480ec8de3ff37103,
+        type: 3}
       propertyPath: onlyOnce
       value: 0
       objectReference: {fileID: 0}
