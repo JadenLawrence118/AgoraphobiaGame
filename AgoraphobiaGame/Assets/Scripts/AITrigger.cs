@@ -9,11 +9,16 @@ public class AITrigger : MonoBehaviour
 
     [SerializeField] private bool onlyOnce = true;
 
+    [SerializeField] private SlowText NPCText;
+    private GameObject textPanel;
+
+    [SerializeField] private string newText;
+
     private TherapistAI therapist;
 
     private void Awake()
     {
-        therapist = GameObject.Find("Therapist").GetComponent<TherapistAI>();
+        therapist = GameObject.Find("Therapist").GetComponent<TherapistAI>();;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,6 +36,12 @@ public class AITrigger : MonoBehaviour
             {
                 therapist.waypointIndex = waypointIndex;
                 therapist.move = true;
+            }
+
+            // sets the UI NPC text and displays it on screen
+            if (NPCText != null)
+            {
+                NPCText.TextChange(newText);
             }
         }
     }
