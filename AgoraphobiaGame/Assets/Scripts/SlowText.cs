@@ -30,7 +30,7 @@ public class SlowText : MonoBehaviour
             activated = false;
             if (NPCText != null)
             {
-                StartCoroutine("SlowType");
+                StartCoroutine(SlowType());
             }
         }
 
@@ -50,7 +50,7 @@ public class SlowText : MonoBehaviour
         if (NPCText.text.Length < writer.Length)
         {
             yield return new WaitForSeconds(typeSpeed);
-            StartCoroutine("SlowType");
+            StartCoroutine(SlowType());
         }
     }
 
