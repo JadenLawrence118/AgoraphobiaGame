@@ -10,7 +10,7 @@ public class SceneTransition : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == targetCollision)
+        if (other.gameObject.tag == "Player")
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
