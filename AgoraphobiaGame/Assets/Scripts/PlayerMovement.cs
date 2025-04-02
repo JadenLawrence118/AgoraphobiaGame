@@ -58,6 +58,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // destroys if game is beaten. This allows for reset for play again
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            globals.eyesUI.SetActive(true);
+            Destroy(globals.eyesUI);
+            Destroy(gameObject);
+        }
+
         // speed cap
         Vector3 flatVelocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
 

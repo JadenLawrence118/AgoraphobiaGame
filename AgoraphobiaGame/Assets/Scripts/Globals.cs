@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class Globals : MonoBehaviour
@@ -33,5 +34,13 @@ public class Globals : MonoBehaviour
 
 
         realPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+    }
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            Destroy(self);
+        }
     }
 }

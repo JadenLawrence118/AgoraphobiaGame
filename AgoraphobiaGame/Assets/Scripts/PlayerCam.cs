@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCam : MonoBehaviour
 {
@@ -35,6 +36,13 @@ public class PlayerCam : MonoBehaviour
 
     void Update()
     {
+        // destroys if game is beaten. This allows for reset for play again
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            Destroy(self);
+            Destroy(gameObject);
+        }
+
         // camera moves with mouse
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivityX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensitivityY;
