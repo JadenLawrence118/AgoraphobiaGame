@@ -19,9 +19,8 @@ public class CloseEyes : MonoBehaviour
         globals.eyesUI.GetComponent<PlayableDirector>().Play();
     }
 
-    IEnumerator WaitForSceneLoad(Vector3 newPos, Vector3 newRot, bool realWorld)
+    public void MovePlayer(Vector3 newPos, Vector3 newRot, bool realWorld)
     {
-        yield return new WaitForSeconds(0.2f);
         GameObject.FindGameObjectWithTag("Player").transform.localPosition = newPos;
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerCam>().yaw = newRot.y;
         globals.realWorld = realWorld;
@@ -32,12 +31,10 @@ public class CloseEyes : MonoBehaviour
         if (globals.realWorld)
         {
             SceneManager.LoadScene(1);
-            StartCoroutine(WaitForSceneLoad(globals.imaginePos, globals.imagineRot, false));
         }
         else
         {
             SceneManager.LoadScene(0);
-            StartCoroutine(WaitForSceneLoad(globals.realPos, globals.realRot, true));
         }
     }
 }

@@ -6085,6 +6085,51 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4962091822164837027, guid: 1860b88ca27521f418f7ff8661717ff7, type: 3}
+--- !u!1 &1784228128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1784228130}
+  - component: {fileID: 1784228129}
+  m_Layer: 0
+  m_Name: HouseController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1784228129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784228128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d627a5e7d5eff641af317357206e59d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  realWorld: 0
+--- !u!4 &1784228130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784228128}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -30.32358, y: -4.4338, z: -5.9697933}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1813401262 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6159819195323411483, guid: c640fc23c710ac94c9f8e5c099d384f2,
@@ -7109,3 +7154,4 @@ SceneRoots:
   - {fileID: 1607637081}
   - {fileID: 1679380320}
   - {fileID: 1338520180}
+  - {fileID: 1784228130}

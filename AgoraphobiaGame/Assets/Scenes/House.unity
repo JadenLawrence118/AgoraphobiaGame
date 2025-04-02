@@ -1344,6 +1344,51 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1124480719}
   m_SourcePrefab: {fileID: 100100000, guid: 937b6cf4e1c28454da445d271039495e, type: 3}
+--- !u!1 &242984652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 242984654}
+  - component: {fileID: 242984653}
+  m_Layer: 0
+  m_Name: HouseController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &242984653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242984652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d627a5e7d5eff641af317357206e59d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  realWorld: 1
+--- !u!4 &242984654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242984652}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -30.32358, y: -4.4338, z: -5.9697933}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &250160504 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c951030bcf9e03c4ea6d0f1cd4859d54,
@@ -14307,7 +14352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   realWorld: 1
-  realPos: {x: 0, y: 0, z: 0}
+  realPos: {x: -2.075, y: 0.552, z: -3.893}
   realRot: {x: 0, y: 0, z: 0}
   imaginePos: {x: 0.67, y: 0.724, z: -18.98}
   imagineRot: {x: 0, y: 0, z: 0}
@@ -16927,3 +16972,4 @@ SceneRoots:
   - {fileID: 477060957}
   - {fileID: 915509751}
   - {fileID: 1121944325}
+  - {fileID: 242984654}
