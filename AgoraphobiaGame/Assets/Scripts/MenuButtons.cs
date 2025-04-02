@@ -11,16 +11,16 @@ public class MenuButtons : MonoBehaviour
     [SerializeField] private Color32 startColour;
     public void Play()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(3);
     }
     public void LoadInstr()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(2);
     }
     public void BackHome()
     {
         Destroy(GameObject.FindGameObjectWithTag("GameController"));
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(1);
     }
     public void colourChange()
     {
@@ -29,5 +29,9 @@ public class MenuButtons : MonoBehaviour
     public void colourRevert()
     {
         transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = startColour;
+    }
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

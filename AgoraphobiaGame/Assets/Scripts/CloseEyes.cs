@@ -30,11 +30,11 @@ public class CloseEyes : MonoBehaviour
     {
         if (globals.realWorld)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(4);
         }
         else
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
         }
     }
 }
