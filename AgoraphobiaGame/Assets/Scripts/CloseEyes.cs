@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class CloseEyes : MonoBehaviour
 {
     private Globals globals;
+    public int imagineScene = 4;
 
     private void Awake()
     {
@@ -30,7 +31,7 @@ public class CloseEyes : MonoBehaviour
     {
         if (globals.realWorld)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(imagineScene);
         }
         else
         {
